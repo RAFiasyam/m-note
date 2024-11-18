@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import NoteForm from './components/noteForm';
 
-function PopUp() {
+function PopUp({ onAddNote }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [notes, setNotes] = useState([]);
+  
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
 
   const handleAddNote = (newNote) => {
-    setNotes([...notes, newNote]);
+    onAddNote([newNote]);
   }
 
   return (
