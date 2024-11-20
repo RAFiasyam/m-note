@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import NoteList from './components/noteList';
-import PopUp from './popUp';
+import NoteForm from './components/noteForm';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <PopUp onAddNote={handleAddNote} />
+      <NoteForm onAddNote={handleAddNote} />
       <NoteList notes={notes} onDeleteNote={handleDeleteNote} />
     </div>
   );
