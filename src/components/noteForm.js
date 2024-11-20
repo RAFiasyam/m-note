@@ -21,19 +21,23 @@ function NoteForm({ onAddNote }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Judul Catatan"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <textarea
-        placeholder="Isi Catatan"
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      />
-      <button type="submit">Tambah Catatan</button>
+    <form onSubmit={handleSubmit} className='m-3'>
+      <div className='flex flex-row gap-5 items-center justify-center m-5'>
+        <input
+          type="text"
+          placeholder="Judul Catatan"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="input input-bordered w-60 max-w-xs"
+        />
+        <textarea
+          placeholder="Isi Catatan"
+          value={content}
+          class="textarea textarea-bordered"
+          onChange={(e) => setContent(e.target.value)}
+        />
+      </div>
+      <button className="btn btn-success text-white" type="submit">Tambah Catatan</button>
     </form>
   );
 }

@@ -6,11 +6,15 @@ function NoteItem({ note, onDeleteNote }) {
   };
 
   return (
-    <li>
-      <h3>{note.title}</h3>
-      <p>{note.content}</p>
-      <button onClick={handleDelete}>Hapus</button>
-    </li>
+    <div className="card bg-primary text-white w-96 shadow-xl">
+  <div className="card-body">
+    <h2 className="card-title">{note.title}</h2>
+    <p className='text-left'>{note.content}</p>
+    <div className="card-actions justify-end">
+      <button className="btn text-white" onClick={handleDelete}>Hapus</button>
+    </div>
+  </div>
+</div>
   );
 }
 

@@ -17,7 +17,8 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App m-5">
+      <h1>(づ￣ 3￣)づ</h1>
       <NoteForm onAddNote={handleAddNote} />
       <NoteList notes={notes} onDeleteNote={handleDeleteNote} />
     </div>

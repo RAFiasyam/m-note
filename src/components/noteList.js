@@ -8,11 +8,11 @@ function NoteList({ notes, onDeleteNote }) {
   }
 
   return (
-    <ul>
+    <div className='flex flex-col gap-5 items-center justify-center m-5'>
       {notes.map((note) => (
         <NoteItem key={note.id} note={note} onDeleteNote={handleDeleteNote} />
       ))}
-    </ul>
+    </div>
   );
 }
 
